@@ -19,6 +19,7 @@ app.use(morgan("dev"))
 
 app.use("/api/message",messageRoute);
 
+app.get("/health", (req,res) => res.json({message: "Health is ok♥"}));
 
 //LISTENING PORT
 server.listen(5001,() => {
